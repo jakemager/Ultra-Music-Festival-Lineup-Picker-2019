@@ -1,0 +1,155 @@
+#background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9b/EDMcrowd.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+	opacity: 0.4;
+	z-index: -1;
+	background-color: #85a1f5;
+}
+
+h2 {
+	padding: 0;
+	padding-top: 25px;
+	padding-bottom: 10px;
+	margin: 0;
+	font-size: 36px;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+.app {
+	padding: 0 25px;
+	margin: 0 45px;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	height: 100vh;
+	min-width: 650px;
+	overflow-y: auto;
+}
+
+.title {
+	text-align: center;
+}
+
+.info {
+	padding: 10px;
+	padding-top: 55px;
+	font-size: 22px;
+}
+
+.info p {
+	padding: 5px;
+}
+
+.info a {
+	color: #fff;
+}
+
+.info p span {
+	font-weight: bolder;
+	font-size: 24px;
+}
+
+.savedText {
+	font-size: 16px;
+	opacity: 0;
+	transition: opacity 0.15s ease-in-out;
+}
+
+.savedText.visible {
+	opacity: 1;
+}
+
+button {
+	width: 120px;
+	height: 30px;
+	margin: 5px;
+	border-radius: 3px;
+	background: #fff;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #c6c6c6;
+	color: #fff;
+}
+
+button.active {
+	background: #c6c6c6;
+	color: #fff;
+}
+
+button.active:hover {
+	background: #888888;
+}
+
+.eventsRowWrapper {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+}
+
+.eventsRowWrapper .title {
+	font-weight: bold;
+	font-size: 11px;
+	text-align: left;
+	width: 10%;
+	padding-top: 3px;
+}
+
+.event {
+	border-radius: 2px;
+	margin-right: 1px;
+	padding: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: center;
+	cursor: pointer;
+	background: #fff;
+	color: #000;
+	user-select: none;
+}
+
+.event:hover {
+	background: #eee;
+	text-overflow: clip;
+	overflow: visible;
+	white-space: nowrap;
+	z-index: 999;
+}
+
+.event.selected {
+	background: #2ebf46;
+	color: #fff;
+}
+
+.event.selected:hover {
+	background: #269f3a;
+}
+
+.event.selectedConflict {
+	background: #de0202;
+	color: #fff;
+}
+
+.event.selectedConflict:hover {
+	background: #b60101;
+}
+
+@media only screen and (max-width: 700px) {
+	.app {
+		width: 200vw;
+		margin: 0;
+	}
+}
